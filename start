@@ -12,14 +12,15 @@ _externals () {
       $OTHER_CMD
    fi
    }
-    
+  
+FROM nikolaik/python-nodejs:python3.9-nodejs18
 apt update && apt upgrade -y
 apt install git -y
 _other_installs
 pip3 install -U pip
 git clone $REPO_URL Github_Repo
 cd Github_Repo
-FROM nikolaik/python-nodejs:python3.9-nodejs18
+
 RUN apt-get update -y && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends ffmpeg \
     && apt-get clean \
