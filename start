@@ -19,6 +19,8 @@ _other_installs
 pip3 install -U pip
 git clone https://github.com/Nobita-xd/music3 Github_Repo
 cd Github_Repo
+apt install git curl python3-pip ffmpeg -y
+apt-get install -y nodejs
 pip3 install -U -r requirements.txt
 _externals
 python3 -m YukkiMusic
