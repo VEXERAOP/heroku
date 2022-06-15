@@ -12,16 +12,13 @@ _externals () {
       $OTHER_CMD
    fi
    }
-  
-
+    
+apt update && apt upgrade -y
 apt install git -y
 _other_installs
 pip3 install -U pip
-git clone $REPO_URL Github_Repo
+git clone https://github.com/Nobita-xd/music3 Github_Repo
 cd Github_Repo
-
-
-
-RUN pip3 install -U -r requirements.txt
+pip3 install -U -r requirements.txt
 _externals
-python3 $PYTHON_FILE
+python3 -m YukkiMusic
